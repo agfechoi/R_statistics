@@ -1,0 +1,13 @@
+getwd()
+setwd("C:/Rtest")
+mycar <- read.csv("mycar.csv", header = TRUE)
+mycar
+summary(mycar)
+range(mycar$color)
+table(mycar$color)
+mmcolor <- c(table(mycar$color))
+chisq.test(mmcolor)
+mycolor <- table(mycar$color)
+chisq.test(mycolor)
+prop.table(mycar$color)
+round(prop.table(table(mycar$color))*100, 2)
